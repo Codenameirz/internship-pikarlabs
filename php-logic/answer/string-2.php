@@ -6,26 +6,29 @@
     $input2 = "renaldy dan sahabat";
     $penanda2 = "/";
 
+    //strlen untuk memperoleh panjang string $input
     $len = strlen($input);
-    // Agar tidak ada notice
+    // Variabel yg belum di set, agar tidak ada notice
     $hasil = null;
     
-    for($x = 0; $x <= $len -1; $x++){
-        $hasil .= ($input[$x].$penanda);
+    // jika $sisipan <= $len -1, maka 
+    for($sisipan = 0; $sisipan <= $len -1; $sisipan++){
+        $hasil .= ($input[$sisipan].$penanda);
     }
+    // Menghilangkan "/" dari $hasil, dari kanan 
     echo chop($hasil,"/");
 
     echo "<br>";
 
 
     // Menghilangkan spasi pada string
-    $delspasi = str_replace(' ', '', $input2);
-    $len2 = strlen($delspasi);
+    $delspace = str_replace(' ', '', $input2);
+    $len2 = strlen($delspace);
     // Agar tidak ada notice
     $hasil2 = null;
 
-    for($y = 0; $y <= $len2 -1; $y++){
-        $hasil2 .= ($delspasi[$y].$penanda2);
+    for($sisipan = 0; $sisipan <= $len2 -1; $sisipan++){
+        $hasil2 .= ($delspace[$sisipan].$penanda2);
     }
     echo chop($hasil2,"/");
 

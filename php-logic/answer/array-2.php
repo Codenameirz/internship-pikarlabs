@@ -1,13 +1,15 @@
 <?php
 
     $input = [1, 3, 2, 9, 4];
+    
     //Mengetahui banyak array
-    $y = count($input);
+    $len = count($input);
 
-    //Untuk membalik urutan array ($x--), -1 karena index dimulai dari 0
-    for($x = ($y -1); $x >= 0; $x--){
-        //Mencetak array
-        echo($input[$x]),"<br>"; 
+    //Jika $index >= 0, maka decrementkan $index 
+    //-1 pada $len karena index dimulai dari 0
+    for($index = ($len -1); $index >= 0; $index--){
+        //Echo hasilnya
+        echo($input[$index]),"<br>"; 
     }
 
 ?>
