@@ -32,25 +32,30 @@
 
     <?php if(!isset($_GET['id'])): ?>
 
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>Asal</th>
-            <th>Link</th>
-        </tr>
+        <!-- <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Asal</th>
+                <th>Link</th>
+            </tr>
 
-        <?php if(isset($_GET["cari-id"])):?>
-        
-            <?php searchId($input,$_GET["cari-id"]);?>
+            <?php if(isset($_GET["cari-id"])):?>
+            
+                <?php searchId($input,$_GET["cari-id"]);?>
 
-        <?php else:?>
+            <?php else:?>
 
-            <?php showTable($input);?>
+                <?php showTable($input);?>
 
-        <?php endif;?>
+            <?php endif;?>
 
-    </table>
+        </table> -->
+        <?php
+            $list = searchId($input, $_GET['cari-id'] ?? '');
+        ?>
+        <?php include "file-tambahan/table.php" ?>
+
     <?php else:?>
 
         <?php $index = showProfile($input, $_GET['id']); ?>

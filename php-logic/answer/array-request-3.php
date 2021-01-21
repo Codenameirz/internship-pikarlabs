@@ -30,38 +30,20 @@
         <?php endif;?>
 
     </form>
-
-    <?php if(!isset($_GET['id'])): ?>
-
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>Asal</th>
-            <th>Link</th>
-        </tr>
-
-        <?php if(isset($_POST["cari-id"])):?>
-        
-            <?php searchId($input, $_POST["cari-id"]);?>
-
-        <?php else:?>
-
-            <?php showTable($input);?>
-
-        <?php endif;?>
-
-    </table>
-    <?php else:?>
-
-        <?php $index = showProfile($input, $_GET['id']); ?>
-        <?php if(isset($index)):?>
-            <?php include 'file-tambahan/profile.php' ?>
-        <?php endif;?>
-
-    <?php endif;?>
-
-
+    <?php 
+        // // 
+        // $search = isset($_POST['cari-id']) ? $_POST['cari-id'] : '';
+        // //
+        // if (isset($_POST['cari-id'])) {
+        //     $search = $_POST['cari-id'];
+        // } else {
+        //     $search = '';
+        // }
+        // 
+        $search = $_POST['cari-id'] ?? '';
+        $list = searchId($input, $search);
+    ?>
+    <?php include "file-tambahan/table.php" ?>
 
 
 </body>
