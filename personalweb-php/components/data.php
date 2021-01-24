@@ -41,13 +41,19 @@
                     ]
                 ];
 
-    $skill = [
-                ['lan' => 'HTML', 'bar' => '32%', 'color' => '#F16529'],
-                ['lan' => 'CSS', 'bar' => '28%', 'color' => ''],
-                ['lan' => 'PHP & SQL', 'bar' => '12%', 'color' => '']
+    $skillv1 = [
+                ['logo' => 'lab la-html5', 'skill' => 'Mengetahui beberapa fungsi tag html'],
+                ['logo' => 'lab la-css3', 'skill' => 'Mengetahui beberapa style css'],
+                ['logo' => 'lab la-php', 'skill' => 'Mengetahui perulangan, conditional, dan GET dan POST']
             ];
 
-    $edu = [
+    $skillv2 = [
+                ['lan' => 'HTML', 'bar' => '32%', 'color' => '#F16529'],
+                ['lan' => 'CSS', 'bar' => '28%', 'color' => '#2965F1'],
+                ['lan' => 'PHP & SQL', 'bar' => '12%', 'color' => '#787CB5']
+            ];
+
+    $education = [
             ['year' => '2010 - 2016', 'school' => 'Bersekolah di SDN Banjar Sugihan 2 Surabaya'],
             ['year' => '2016 - 2019', 'school' => 'Bersekolah di SMP Muhammadiyah 14 Surabaya'],
             ['year' => '2019 - Sekarang', 'school' => 'Bersekolah di SMKN 2 Surabaya']
