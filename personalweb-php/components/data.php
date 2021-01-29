@@ -84,20 +84,17 @@
                 ],
             'v2' => [
                   [
-                    'logo' => 'lab la-html5',
-                    'lan' => 'HTML',
+                    'lan' => 'HTML : ',
                     'bar' => '32%',
                     'color' => '#F16529'
                   ],
                   [
-                    'logo' => 'lab la-css3',
-                    'lan' => 'CSS',
+                    'lan' => 'CSS : ',
                     'bar' => '28%',
                     'color' => '#2965F1'
                   ],
                   [
-                    'logo' => 'lab la-php',
-                    'lan' => 'PHP & SQL',
+                    'lan' => 'PHP : ',
                     'bar' => '12%',
                     'color' => '#787CB5'
                   ]
@@ -128,7 +125,9 @@
                   'year' => '2020',
                   'url' => 'https://codenameirz.github.io/Landing-page-website/',
                   'preview' => './img/portfolio-1.png',
-                  'imgs' => ''
+                  'descprev' => 'Tampilan awal landing page',
+                  'img' => './img/portfolio-1.2.png',
+                  'descimg' => 'Tampilan menu features dan find me'
                 ],
                 [
                   'id' => '2',
@@ -137,9 +136,16 @@
                   'year' => '2020',
                   'url' => 'https://codenameirz.github.io/Portofolio/',
                   'preview' => './img/portfolio-2.png',
-                  'imgs' => ''
+                  'descprev' => 'Tampilan awal web portfolio',
+                  'img' => './img/portfolio-2.2.png',
+                  'descimg' => 'Tampilan menu about dan find me'
                 ]
           ];
+
+  $modalEmail = [
+            'notif' => 'Berhasil',
+            'message' => 'Pesan telah berhasil terkirim'
+        ];
 
   $footer = [
               'copyright' => '&copy; 2021 Haris purwanto',

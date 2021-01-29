@@ -1,7 +1,5 @@
 <?php
 
-	include "data.php";
-
 	if(isset($_POST['submit'])){
 		$to = "purwantoharis499@gmail.com";
 		$from = $_POST['from'];
@@ -9,6 +7,8 @@
 		$message = $_POST['message'];
 
 		$mail = 'Dari : '.$from;
+
+		$mailTerkirim = true;
 
 		mail($to, $subject, $message, $mail);
 	}

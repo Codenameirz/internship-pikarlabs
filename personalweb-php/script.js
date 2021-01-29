@@ -19,8 +19,14 @@ function topFunction(){
 function showModal(){
   document.getElementById("modal").style.display = 'block';
 }
-function closeModal(){
-  document.getElementById("modal").style.display = 'none';
+function closeModal(id){
+  document.getElementById(id).style.display = 'none';
 }
 
 //Carousel
+var swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})

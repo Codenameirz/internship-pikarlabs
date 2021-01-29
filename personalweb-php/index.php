@@ -14,8 +14,8 @@
 			<div class="bg-black m-auto w-11/12">
 				<img class="h-auto w-full m-auto opacity-100 group-hover:opacity-40 transition duration-500" src="<?= $prev['img'];?>" alt="">
 			</div>
-			<h1 class="text-center text-lg md:text-xl lg:text-2xl font-bold md:p-4"><?= $prev['h1'];?></h1>
-			<p class="text-center text-sm md:text-base lg:text-lg font-light md:p-4"><?= $prev['caption'];?></p>
+			<h1 class="text-center text-black text-lg md:text-xl lg:text-2xl font-bold md:p-4"><?= $prev['h1'];?></h1>
+			<p class="text-center text-black text-sm md:text-base lg:text-lg font-light md:p-4"><?= $prev['caption'];?></p>
 		</a>
 	</div>
 <?php endforeach;?>
