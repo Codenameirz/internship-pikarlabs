@@ -16,17 +16,20 @@ function topFunction(){
 }
 
 //Buka dan tutup modal
-function showModal(){
-  document.getElementById("modal").style.display = 'block';
+function showModal(id){
+  document.getElementById(id).style.display = 'block';
 }
 function closeModal(id){
   document.getElementById(id).style.display = 'none';
 }
 
-//Carousel
+//Carousel swiperjs infinite loop
 var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-})
+});

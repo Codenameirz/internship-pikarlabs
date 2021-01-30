@@ -32,23 +32,40 @@
 		<img class="h-36 md:h-44 w-36 md:w-44 rounded-full " src="<?= $profile['img'];?>" alt="">
 		<p class="text-lg md:text-2xl text-center text-black font-light py-8 w-10/12"><?= $profile['desc'];?></p>
 	</div>
-	<div class="grid md:grid-cols-2 w-11/12 py-12 gap-x-4 md:gap-x-16 gap-y-8 items-center justify-between m-auto">
-		<div class="box-content h-auto w-full m-auto rounded-md">
-			<h1 class="text-center bg-gray-400 rounded-t-lg text-xl text-black font-bold"><?= $profile['menu'][0]['title'];?></h1>
-			<div class="bg-gray-300 h-48 rounded-b-md">
-			<!--<?php foreach($skillv1 as $sv1):?>
-				<i class="<?= $sv1['logo'];?>" style="font-size: 64px; text-align: center;"></i>
-				<p class="px-4"><?= $sv1['skill'];?></p>
-			<?php endforeach;?>-->
+	<div class="py-4">
+		<div class="grid grid-cols w-11/12 m-auto">
+			<h1 class="w-full bg-blue-500 text-center text-black text-xl font-bold py-1 rounded-t-md"><?= $profile['menu'][0]['title'];?></h1>
+			<div class="box-content w-full bg-blue-300 m-auto rounded-b-md">
+				<div class="py-4">
+					<div class="grid md:grid-cols-3 w-11/12 gap-x-8 gap-y-4 m-auto items-center justify-center">
+						<?php foreach($skill['v1'] as $sv1):?>
+							<div class="box-content w-full h-full bg-gray-200 m-auto rounded-md shadow-md">
+								<h1 class="bg-green-500 w-full p-2 text-center text-black text-xl font-semibold rounded-t-md"><?= $sv1['lan'];?></h1>
+								<div class="py-2">
+									<img class="h-28 w-28 p-2 m-auto" src="<?= $sv1['logo'];?>" alt="">
+								</div>
+								<p class="text-center text-black text-lg px-4 py-2"><?= $sv1['skill'];?></p>
+							</div>
+						<?php endforeach;?>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="box-content h-auto w-full m-auto rounded-md">
-			<h1 class="text-center text-black bg-gray-400 rounded-t-lg text-xl font-bold"><?= $profile['menu'][1]['title'];?></h1>
-			<div class="bg-gray-300 h-48 rounded-b-md">
-			<!--<?php foreach($education as $edu):?>
-				<h1><?= $edu['year'];?></h1>
-				<p><?= $edu['school'];?></p>
-			<?php endforeach;?>-->
+	</div>
+	<div class="py-4">
+		<div class="grid grid-cols w-11/12 m-auto">
+			<h1 class="bg-blue-500 w-full text-center text-black text-xl font-bold py-1 rounded-t-md"><?= $profile['menu'][1]['title'];?></h1>
+			<div class="box-content w-full bg-blue-300 m-auto rounded-b-md">
+				<div class="py-4">
+					<div class="grid md:grid-cols-3 w-11/12 gap-x-8 gap-y-4 m-auto items-center justify-center">
+						<?php foreach($education as $edu):?>
+							<div class="box-content w-full h-full bg-gray-200 m-auto rounded-md shadow-md">
+								<h1 class="bg-green-500 w-full text-center text-black text-xl font-semibold rounded-t-md"><?= $edu['year'];?></h1>
+								<p class="text-center text-black text-lg p-6"><?= $edu['school'];?></p>
+							</div>
+						<?php endforeach;?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -59,16 +76,16 @@
 <section id="<?= $menuNav['nav'][1]['id'];?>">
 	<div class="flex flex-col items-center bg-gray-300 h-full md:h-screen">
 		<h1 class="text-2xl md:text-4xl text-center text-black font-bold pt-16 md:pt-20"><?= $section[1]['title'];?></h1>
-		<div class="grid md:grid-cols-2 w-11/12 py-12 gap-x-4 md:gap-x-24 gap-y-8 items-center justify-between">
-		<?php foreach($portfolio as $value):?>
+		<div class="grid md:grid-cols-2 w-11/12 py-12 gap-x-4 md:gap-x-12 lg:gap-x-24 gap-y-8 items-center justify-between">
+		<?php foreach($portfolio as $port):?>
 			<div class="group box-content h-auto w-full bg-gray-400 bg-opacity-50 m-auto rounded-md md:rounded-xl cursor-pointer transform lg:hover:-translate-y-1 transition duration-300 shadow-lg hover:shadow-none">
-				<h1 class="text-center font-bold p-2 text-black text-lg sm:text-xl lg:text-2xl"><?= $value['name'];?> (<?= $value['year'];?>)</h1>
+				<h1 class="text-center font-bold p-2 text-black text-lg sm:text-xl lg:text-2xl"><?= $port['name'];?> (<?= $port['year'];?>)</h1>
 					<div class="bg-black m-auto w-11/12">
-						<img class="h-auto w-full m-auto opacity-40 group-hover:opacity-100 transition duration-500" src="<?= $value['preview'];?>" alt="">
+						<img class="h-auto w-full m-auto opacity-40 group-hover:opacity-100 transition duration-500" src="img/<?= $port['preview'];?>" alt="">
 					</div>
-				<p class="w-4/5 text-center p-2 font-light text-black text-base sm:text-lg md:text-xl m-auto"><?= $value['desc'];?></p>
+				<p class="w-4/5 text-center p-2 font-light text-black text-base sm:text-lg md:text-xl m-auto"><?= $port['desc'];?></p>
 				<div class="grid grid-cols-2 m-auto justify-between p-4">
-					<button id="Btn" class="border-2 border-green-500 h-8 md:h-12 w-24 md:w-28 m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-green-500">Galeri</button>
+					<button id="Btn" onclick="showModal('modal')" class="border-2 border-green-500 h-8 md:h-12 w-24 md:w-28 m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-green-500">Galeri</button>
 					<button class="bg-green-500 h-8 md:h-12 w-24 md:w-28 m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-transparent border-2 hover:bg-transparent border-green-500"><a href="<?= $value['url'];?>" target="_blank">Kunjungi</a></button>
 				</div>
 			</div>

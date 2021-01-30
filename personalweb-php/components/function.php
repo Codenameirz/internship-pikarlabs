@@ -13,4 +13,15 @@
 		mail($to, $subject, $message, $mail);
 	}
 
+	function getId($input,$id){
+		$index = null;
+
+		foreach($input as $key => $val){
+			if($key == $id){
+				$index = $key;
+			}
+		}
+		return $index;
+	}
+
 ?>

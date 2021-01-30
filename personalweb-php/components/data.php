@@ -70,15 +70,18 @@
   $skill = [
             'v1' => [
                   [
-                    'logo' => 'lab la-html5',
+                    'lan' => 'HTML',
+                    'logo' => './img/html.png',
                     'skill' => 'Mengetahui beberapa fungsi tag html'
                   ],
                   [
-                    'logo' => 'lab la-css3',
+                    'lan' => 'CSS',
+                    'logo' => './img/css.png',
                     'skill' => 'Mengetahui beberapa style css'
                   ],
                   [
-                    'logo' => 'lab la-php',
+                    'lan' => 'PHP',
+                    'logo' => './img/php.png',
                     'skill' => 'Mengetahui perulangan, conditional, dan GET dan POST'
                   ]
                 ],
@@ -103,14 +106,17 @@
 
   $education = [
                 [
+                  'img' => '',
                   'year' => '2010 - 2016',
                   'school' => 'Bersekolah di SDN Banjar Sugihan 2 Surabaya'
                 ],
                 [
+                  'img' => '',
                   'year' => '2016 - 2019',
                   'school' => 'Bersekolah di SMP Muhammadiyah 14 Surabaya'
                 ],
                 [
+                  'img' => '',
                   'year' => '2019 - Sekarang',
                   'school' => 'Bersekolah di SMKN 2 Surabaya'
                 ]
@@ -124,9 +130,9 @@
                   'desc' => 'Website landing page yang saya buat menggunakan html, css, dan framework bootstrap.',
                   'year' => '2020',
                   'url' => 'https://codenameirz.github.io/Landing-page-website/',
-                  'preview' => './img/portfolio-1.png',
+                  'preview' => 'portfolio-1.png',
                   'descprev' => 'Tampilan awal landing page',
-                  'img' => './img/portfolio-1.2.png',
+                  'img' => 'portfolio-1.2.png',
                   'descimg' => 'Tampilan menu features dan find me'
                 ],
                 [
@@ -135,9 +141,9 @@
                   'desc' => 'Website yang saya buat menggunakan html, css, dan framework bootstrap untuk keperluan magang.',
                   'year' => '2020',
                   'url' => 'https://codenameirz.github.io/Portofolio/',
-                  'preview' => './img/portfolio-2.png',
+                  'preview' => 'portfolio-2.png',
                   'descprev' => 'Tampilan awal web portfolio',
-                  'img' => './img/portfolio-2.2.png',
+                  'img' => 'portfolio-2.2.png',
                   'descimg' => 'Tampilan menu about dan find me'
                 ]
           ];
