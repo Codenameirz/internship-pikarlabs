@@ -78,15 +78,15 @@
 		<h1 class="text-2xl md:text-4xl text-center text-black font-bold pt-16 md:pt-20"><?= $section[1]['title'];?></h1>
 		<div class="grid md:grid-cols-2 w-11/12 py-12 gap-x-4 md:gap-x-12 lg:gap-x-24 gap-y-8 items-center justify-between">
 		<?php foreach($portfolio as $port):?>
-			<div class="group box-content h-auto w-full bg-gray-400 bg-opacity-50 m-auto rounded-md md:rounded-xl cursor-pointer transform lg:hover:-translate-y-1 transition duration-300 shadow-lg hover:shadow-none">
+			<div class="group box-content h-auto w-full bg-gray-400 bg-opacity-50 m-auto rounded-md md:rounded-xl cursor-pointer transform lg:hover:-translate-y-1 transition duration-300 shadow-md hover:shadow-none">
 				<h1 class="text-center font-bold p-2 text-black text-lg sm:text-xl lg:text-2xl"><?= $port['name'];?> (<?= $port['year'];?>)</h1>
 					<div class="bg-black m-auto w-11/12">
 						<img class="h-auto w-full m-auto opacity-40 group-hover:opacity-100 transition duration-500" src="img/<?= $port['preview'];?>" alt="">
 					</div>
 				<p class="w-4/5 text-center p-2 font-light text-black text-base sm:text-lg md:text-xl m-auto"><?= $port['desc'];?></p>
-				<div class="grid grid-cols-2 m-auto justify-between p-4">
-					<button id="Btn" onclick="showModal('modal')" class="border-2 border-green-500 h-8 md:h-12 w-24 md:w-28 m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-green-500">Galeri</button>
-					<button class="bg-green-500 h-8 md:h-12 w-24 md:w-28 m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-transparent border-2 hover:bg-transparent border-green-500"><a href="<?= $value['url'];?>" target="_blank">Kunjungi</a></button>
+				<div class="grid md:grid-cols-2 w-11/12 m-auto md:justify-between p-4 gap-x-8 gap-y-4">
+					<button id="Btn" onclick="showModal('modal')" class="border-2 border-green-500 h-12 w-full m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-green-500 transition duration-500 ease-in">Galeri</button>
+					<button class="bg-green-500 h-12 w-full m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-transparent border-2 hover:bg-transparent border-green-500 transition duration-500 ease-out"><a href="<?= $port['url'];?>" target="_blank">Kunjungi</a></button>
 				</div>
 			</div>
 		<?php endforeach;?>

@@ -18,7 +18,7 @@
 
 		foreach($input as $key => $val){
 			if($key == $id){
-				$index = $key;
+				$index = true;
 			}
 		}
 		return $index;
