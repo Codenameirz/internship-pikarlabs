@@ -11,6 +11,7 @@
 	if($mailTerkirim == true){
 		include "components/modal-email.php";
 	}
+	$id = $_GET['id'];
 ?>
 
 <button class="hidden fixed h-12 w-12 rounded-full text-black bg-green-500 hover:bg-green-700 bottom-2 md:bottom-3 right-2 md:right-3 md:right-6 z-20 text-lg md:text-2xl font-black focus:outline-none transition duration-500 ease-in-out" onclick="topFunction()" id="scrollTop"><i class="las la-angle-double-up"></i></button>
@@ -77,7 +78,7 @@
 	<div class="flex flex-col items-center bg-gray-300 h-full md:h-screen">
 		<h1 class="text-2xl md:text-4xl text-center text-black font-bold pt-16 md:pt-20"><?= $section[1]['title'];?></h1>
 		<div class="grid md:grid-cols-2 w-11/12 py-12 gap-x-4 md:gap-x-12 lg:gap-x-24 gap-y-8 items-center justify-between">
-		<?php foreach($portfolio as $port):?>
+		<?php foreach($portfolio as $id => $port):?>
 			<div class="group box-content h-auto w-full bg-gray-400 bg-opacity-50 m-auto rounded-md md:rounded-xl cursor-pointer transform lg:hover:-translate-y-1 transition duration-300 shadow-md hover:shadow-none">
 				<h1 class="text-center font-bold p-2 text-black text-lg sm:text-xl lg:text-2xl"><?= $port['name'];?> (<?= $port['year'];?>)</h1>
 					<div class="bg-black m-auto w-11/12">
@@ -85,8 +86,8 @@
 					</div>
 				<p class="w-4/5 text-center p-2 font-light text-black text-base sm:text-lg md:text-xl m-auto"><?= $port['desc'];?></p>
 				<div class="grid md:grid-cols-2 w-11/12 m-auto md:justify-between p-4 gap-x-8 gap-y-4">
-					<button id="Btn" onclick="showModal('modal')" class="border-2 border-green-500 h-12 w-full m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-green-500 transition duration-500 ease-in">Galeri</button>
-					<button class="bg-green-500 h-12 w-full m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-transparent border-2 hover:bg-transparent border-green-500 transition duration-500 ease-out"><a href="<?= $port['url'];?>" target="_blank">Kunjungi</a></button>
+					<button onclick="showModal('modal')" class="border-2 border-green-500 h-12 w-full m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-green-500 transition duration-500 ease-in">Galeri</button>
+					<a href="<?= $port['url'];?>" target="_blank"><button class="bg-green-500 h-12 w-full m-auto text-black text-sm md:text-base rounded md:rounded-md hover:bg-transparent border-2 hover:bg-transparent border-green-500 transition duration-500 ease-out">Kunjungi</button></a>
 				</div>
 			</div>
 		<?php endforeach;?>

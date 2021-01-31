@@ -3,12 +3,12 @@
 			<div class="swiper-container h-full w-full m-auto">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<p class="text-black text-center text-md md:text-lg"><?= $portfolio[$id]['descprev'];?></p>
-							<img class="w-full h-auto m-auto" src="img/<?= $portfolio[$id]['preview'];?>" alt="">
+							<p class="text-black text-center text-md md:text-lg">{{ portfolio[id].descprev }}</p>
+							<img class="w-full h-auto m-auto" src="img/{{ portfolio[id].preview }}" alt="">
 						</div>
 						<div class="swiper-slide">
-						<p class="text-black text-center text-md md:text-lg"><?= $portfolio[$id]['descimg'];?></p>
-							<img class="w-full h-auto m-auto" src="img/<?= $portfolio[$id]['img'];?>" alt="">
+						<p class="text-black text-center text-md md:text-lg">{{ portfolio[id].descimg }}</p>
+							<img class="w-full h-auto m-auto" src="img/{{ portfolio[id].img }}" alt="">
 						</div>
 					</div>
 					<!-- Add Pagination -->

@@ -18,18 +18,19 @@ function topFunction(){
 //Buka dan tutup modal
 function showModal(id){
   document.getElementById(id).style.display = 'block';
+  //Carousel swiperjs infinite loop
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '#next',
+      prevEl: '#prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 }
 function closeModal(id){
   document.getElementById(id).style.display = 'none';
 }
-
-//Carousel swiperjs infinite loop
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
